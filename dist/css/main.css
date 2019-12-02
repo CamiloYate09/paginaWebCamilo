@@ -281,7 +281,7 @@ main#home h1 {
 .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border-radius: 50%;
+    border-radius: 12%;
     border: #eece1a 3px solid;
 }
 
