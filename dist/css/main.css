@@ -299,9 +299,10 @@ main#home h1 {
 }
 
 .about-info .job {
-    background: #515151;
+    background: #E7E9BB;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid;
+    border-radius: 43px;
 }
 
 .projects {
