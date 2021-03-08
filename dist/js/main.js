@@ -40,7 +40,7 @@ function toggleMenu() {
 window.addEventListener("DOMContentLoaded", () => {
 
     const textOutput = document.querySelector('.titulo'),
-        phrases = ['Desarrollador Web', 'Programador','Y', 'Emprendedor'],
+        phrases = ['Ingeniero de Software', 'Estudiante de Inteligencia Artificial', 'Emprendedor'],
         delay = [2000, 4000, 6000,8000];
 
     phrases.forEach((phrase, i) => setTimeout(() => textOutput.textContent = phrase, delay[i]));
