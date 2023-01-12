@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="426c4ee1-c2e0-48ee-8479-9c30ea6fe35a" name="Default Changelist" comment="2023 actualización 2">
-      <change afterPath="$PROJECT_DIR$/dist/blog.html" afterDir="false" />
+    <list default="true" id="426c4ee1-c2e0-48ee-8479-9c30ea6fe35a" name="Default Changelist" comment="2023 actualización 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +72,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\Documents\1_MACHINE_LEARNING_PROJECTS\PAGINA_WEB\paginaWebCamilo\dist" />
       <recent name="C:\Users\smartsoft\3D Objects\camilo\PAGINA_CAMILO\paginaWebCamilo\images\machine" />
       <recent name="C:\Users\Kernel_linux\Desktop\CAMILO_PAGINA_WEB\paginaWebCamilo\dist\logos" />
       <recent name="C:\Users\Kernel_linux\Desktop\CAMILO_PAGINA_WEB\paginaWebCamilo\dist\media" />
       <recent name="D:\2019-CAMILO-YATE\HOJA DE VIDA\HojaVidaWeb\dist\js" />
-      <recent name="D:\2019-CAMILO-YATE\HOJA DE VIDA\HojaVidaWeb\dist\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\smartsoft\3D Objects\camilo\PAGINA_CAMILO\paginaWebCamilo\dist\logos" />
@@ -123,7 +121,7 @@
       <workItem from="1598597537427" duration="679000" />
       <workItem from="1611358347014" duration="2055000" />
       <workItem from="1625302540814" duration="662000" />
-      <workItem from="1673493414896" duration="1615000" />
+      <workItem from="1673493414896" duration="2882000" />
     </task>
     <task id="LOCAL-00001" summary="2023 actualización">
       <created>1673493979681</created>
@@ -146,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673494738254</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2023 actualización 3">
+      <created>1673495064518</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673495064518</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +171,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2023 actualización" />
     <MESSAGE value="2023 actualización 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023 actualización 2" />
+    <MESSAGE value="2023 actualización 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023 actualización 3" />
   </component>
 </project>
