@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="426c4ee1-c2e0-48ee-8479-9c30ea6fe35a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/certificaciones.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/certificaciones.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/contact.html" afterDir="false" />
+    <list default="true" id="426c4ee1-c2e0-48ee-8479-9c30ea6fe35a" name="Default Changelist" comment="2023 actualización 2">
+      <change afterPath="$PROJECT_DIR$/dist/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,9 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="1giVjQm6ZHBW947u6EPPYNJgrpD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,7 +64,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/USUARIO/Documents/1_MACHINE_LEARNING_PROJECTS/PAGINA_WEB/paginaWebCamilo",
+    "last_opened_file_path": "C:/Users/USUARIO/Documents/1_MACHINE_LEARNING_PROJECTS/PAGINA_WEB/paginaWebCamilo/dist",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -121,8 +123,30 @@
       <workItem from="1598597537427" duration="679000" />
       <workItem from="1611358347014" duration="2055000" />
       <workItem from="1625302540814" duration="662000" />
-      <workItem from="1673493414896" duration="539000" />
+      <workItem from="1673493414896" duration="1615000" />
     </task>
+    <task id="LOCAL-00001" summary="2023 actualización">
+      <created>1673493979681</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673493979681</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2023 actualización 2">
+      <created>1673494095300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673494095300</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2023 actualización 2">
+      <created>1673494738254</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673494738254</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,5 +162,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2023 actualización" />
+    <MESSAGE value="2023 actualización 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023 actualización 2" />
   </component>
 </project>
