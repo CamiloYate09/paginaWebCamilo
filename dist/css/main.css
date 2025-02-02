@@ -463,3 +463,52 @@ main#home h1 {
 .imagenes {
     height: 302px;
 }
+
+.job.job-style {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    border: 4px solid transparent; /* Borde transparente inicial */
+    border-radius: 10px; /* Bordes redondeados */
+    background: linear-gradient(
+            to right,
+            #ff0000, /* rojo */
+            #ff7f00, /* naranja */
+            #ffff00, /* amarillo */
+            #00ff00, /* verde */
+            #0000ff, /* azul */
+            #4b0082, /* índigo */
+            #8b00ff, /* violeta */
+            #ff1493  /* rosa fuerte */
+    ); /* Gradiente multicolor */
+    background-size: 300%; /* Ajuste del fondo para un desplazamiento fluido */
+    background-clip: padding-box; /* Aplica el gradiente al área del contenido */
+    -webkit-background-clip: padding-box; /* Compatibilidad con navegadores basados en Webkit */
+    animation: border-rotate 5s linear infinite; /* Animación para rotar los colores */
+    overflow: hidden; /* Esconde cualquier contenido fuera de borde */
+    color: #000; /* Color de texto (asegúrate de que sea visible) */
+}
+
+.job.job-style::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 10px; /* Debe coincidir con los bordes del elemento */
+    padding: 5px;
+    background: #fff; /* Fondo interior blanco */
+    z-index: -1; /* Envía la capa detrás del contenido */
+}
+
+/* Animación del gradiente */
+@keyframes border-rotate {
+    0% {
+        background-position: 0% 50%; /* Empieza desde la izquierda */
+    }
+    50% {
+        background-position: 100% 50%; /* Avanza hacia la derecha */
+    }
+    100% {
+        background-position: 0 50%; /* Regresa al inicio */
+    }
+}
