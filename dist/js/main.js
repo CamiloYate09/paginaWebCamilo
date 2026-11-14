@@ -44,13 +44,28 @@ function toggleMenu() {
 window.addEventListener("DOMContentLoaded", () => {
 
     const textOutput = document.querySelector('.titulo'),
-        phrases = ['Ingeniero de Software', 'Estudiante de Inteligencia Artificial', 'Emprendedor'],
-        delay = [2000, 4000, 6000,8000];
+        phrases = ['Ingeniero de Software', 'Estudiante de Inteligencia Artificial', 'Emprendedor'];
 
     // Only the home page has the rotating subtitle
     if (!textOutput) return;
 
-    phrases.forEach((phrase, i) => setTimeout(() => textOutput.textContent = phrase, delay[i]));
+    // With reduced motion, keep the static text that lists all three
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    // Fade out, swap the phrase, fade back in; loops forever
+    let current = -1;
+    const next = () => {
+        textOutput.classList.add('is-changing');
+        setTimeout(() => {
+            current = (current + 1) % phrases.length;
+            textOutput.textContent = phrases[current];
+            textOutput.classList.remove('is-changing');
+        }, 400);
+    };
+    setTimeout(() => {
+        next();
+        setInterval(next, 3000);
+    }, 2000);
 
 });
 //************************************************

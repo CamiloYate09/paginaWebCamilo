@@ -1,9 +1,28 @@
+/* Paleta: --brand es el fondo de las páginas internas, --ink el texto sobre él,
+   --accent el resaltado sobre --brand y --highlight el resaltado sobre fondos oscuros. */
+:root {
+    --brand: #eece1a;
+    --ink: #141414;
+    --accent: #5b21b6;
+    --highlight: #eece1a;
+    --card-gradient: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff, #ff1493);
+}
+
+/* Modo navidad: lo activa dist/js/navidad.js en <html data-navidad> */
+:root[data-navidad] {
+    --brand: #a50f26;
+    --ink: #ffffff;
+    --accent: #ffd76a;
+    --highlight: #ffd76a;
+    --card-gradient: linear-gradient(to right, #0b5d3b, #127a4c, #a50f26, #c8102e, #127a4c, #0b5d3b);
+}
+
 /*Cambiar de nombres*/
 .titulo {
     position: absolute;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: calc(1em + 1vw);
-    color: yellow;
+    color: var(--highlight);
     text-shadow: 0 0 0.025em var(--text-color);
     text-align: center;
     /*text-transform: uppercase;*/
@@ -118,7 +137,7 @@
 }
 
 .menu-branding {
-    background: #eece1a; /* fallback for old browsers */
+    background: var(--brand);
     /*background: -webkit-linear-gradient(to right, #1CB5E0, #000046); !* Chrome 10-25, Safari 5.1-6 *!*/
     /*background: linear-gradient(to right, #1CB5E0, #000046); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!;*/
     transform: translate3d(0, 100%, 0);
@@ -148,7 +167,7 @@
 }
 
 .menu .nav-item.current > a {
-    color: #eece1a;
+    color: var(--highlight);
 }
 
 .menu .nav-link {
@@ -164,7 +183,7 @@
 }
 
 .menu .nav-link:hover {
-    color: #eece1a;
+    color: var(--highlight);
 }
 
 .nav-item:nth-child(1) {
@@ -188,10 +207,10 @@
 }
 
 body {
-    background: #eece1a; /* fallback for old browsers */
+    background: var(--brand);
     /*background: -webkit-linear-gradient(to right, #1CB5E0, #000046); !* Chrome 10-25, Safari 5.1-6 *!*/
     /*background: linear-gradient(to right, #1CB5E0, #000046); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!;*/
-    color: #fff;
+    color: var(--ink);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -202,6 +221,22 @@ body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover;
+    color: #fff;
+}
+
+body#bg-img .text-secondary {
+    color: var(--highlight);
+}
+
+/* Enlaces dentro de textos sobre --brand */
+.bio a,
+.boxes a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.bio strong {
+    color: var(--accent);
 }
 
 body#bg-img:after {
@@ -233,11 +268,12 @@ h2.sm-heading,
 h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
 }
 
 a {
-    color: #fff;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -248,7 +284,7 @@ header {
 }
 
 .text-secondary {
-    color: #eece1a;
+    color: var(--accent);
 }
 
 main {
@@ -265,7 +301,7 @@ main .icons a {
 }
 
 main .icons a:hover {
-    color: #eece1a;
+    color: var(--highlight);
     transition: all 0.5s ease-out;
 }
 
@@ -288,7 +324,7 @@ main#home h1 {
     grid-area: bioimage;
     margin: auto;
     border-radius: 12%;
-    border: #eece1a 3px solid;
+    border: var(--ink) 3px solid;
 }
 
 .about-info .bio {
@@ -307,7 +343,7 @@ main#home h1 {
 .about-info .job {
     background: #E7E9BB;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid;
+    border-bottom: var(--brand) 5px solid;
     border-radius: 43px;
 }
 
@@ -329,10 +365,19 @@ main#home h1 {
     border: 3px #fff solid;
 }
 
+.projects .item {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.projects .item:hover,
+.projects .item:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
 .projects img:hover {
-    opacity: 0.5;
-    border-color: #eece1a;
-    transition: all 0.5s ease-out;
+    border-color: var(--ink);
+    transition: border-color 0.3s ease-out;
 }
 
 .boxes {
@@ -346,7 +391,7 @@ main#home h1 {
 
 .boxes div {
     font-size: 2rem;
-    border: 3px #fff solid;
+    border: 3px var(--ink) solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out;
@@ -354,12 +399,12 @@ main#home h1 {
 
 .boxes div:hover {
     padding: 0.5rem 1.5rem;
-    background: #eece1a;
-    color: #000;
+    background: var(--ink);
+    color: var(--brand);
 }
 
 .boxes div:hover span {
-    color: #000;
+    color: var(--brand);
 }
 
 .btn, .btn-dark, .btn-light {
@@ -370,7 +415,7 @@ main#home h1 {
 }
 
 .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
+    background: var(--highlight);
     color: #000;
 }
 
@@ -520,17 +565,7 @@ main .icons a {
     padding: 20px;
     border: 4px solid transparent; /* Borde transparente inicial */
     border-radius: 10px; /* Bordes redondeados */
-    background: linear-gradient(
-            to right,
-            #ff0000, /* rojo */
-            #ff7f00, /* naranja */
-            #ffff00, /* amarillo */
-            #00ff00, /* verde */
-            #0000ff, /* azul */
-            #4b0082, /* índigo */
-            #8b00ff, /* violeta */
-            #ff1493  /* rosa fuerte */
-    ); /* Gradiente multicolor */
+    background: var(--card-gradient); /* Gradiente multicolor (o navideño) */
     background-size: 300%; /* Ajuste del fondo para un desplazamiento fluido */
     background-clip: padding-box; /* Aplica el gradiente al área del contenido */
     -webkit-background-clip: padding-box; /* Compatibilidad con navegadores basados en Webkit */
@@ -549,6 +584,21 @@ main .icons a {
     z-index: -1; /* Envía la capa detrás del contenido */
 }
 
+/* Títulos de las tarjetas legibles sobre cualquier punto del gradiente */
+.job.job-style h3,
+.job.job-style h6 {
+    display: table;
+    margin: 0 auto 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.job.job-style h6:empty {
+    display: none;
+}
+
 /* Animación del gradiente */
 @keyframes border-rotate {
     0% {
@@ -559,5 +609,108 @@ main .icons a {
     }
     100% {
         background-position: 0 50%; /* Regresa al inicio */
+    }
+}
+/* ---------- Animaciones de entrada ---------- */
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+}
+
+main .lg-heading,
+main .sm-heading,
+main .icons,
+.about-info > *,
+.boxes > div,
+.projects .item {
+    animation: rise 0.6s ease-out both;
+}
+
+main .sm-heading,
+main .icons { animation-delay: 0.15s; }
+
+.projects .item:nth-child(2), .boxes > div:nth-child(2), .about-info > :nth-child(2) { animation-delay: 0.1s; }
+.projects .item:nth-child(3), .boxes > div:nth-child(3), .about-info > :nth-child(3) { animation-delay: 0.2s; }
+.projects .item:nth-child(4), .about-info > :nth-child(4) { animation-delay: 0.3s; }
+.projects .item:nth-child(n+5), .about-info > :nth-child(n+5) { animation-delay: 0.4s; }
+
+/* Subtítulo rotativo del inicio (dist/js/main.js) */
+.titulo {
+    transition: opacity 0.4s ease-in-out;
+}
+
+.titulo.is-changing {
+    opacity: 0;
+}
+
+/* ---------- Modo navidad ---------- */
+.navidad-toggle {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 4;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.navidad-toggle[aria-pressed="true"] {
+    background: #0b5d3b;
+}
+
+.navidad-toggle:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+.navidad-saludo {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--highlight);
+}
+
+.nieve {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.copo {
+    position: absolute;
+    top: -2rem;
+    color: #fff;
+    opacity: 0.85;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    to {
+        transform: translate3d(var(--deriva, 0), 110vh, 0) rotate(360deg);
+    }
+}
+
+/* ---------- Movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .nieve {
+        display: none;
     }
 }
