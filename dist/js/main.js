@@ -21,6 +21,8 @@ function toggleMenu() {
         menuNav.classList.add('show');
         menuBranding.classList.add('show');
         navItems.forEach(item => item.classList.add('show'));
+        menuBtn.setAttribute('aria-expanded', 'true');
+        menuBtn.setAttribute('aria-label', 'Cerrar menú');
 
         // Set Menu State
         showMenu = true;
@@ -30,6 +32,8 @@ function toggleMenu() {
         menuNav.classList.remove('show');
         menuBranding.classList.remove('show');
         navItems.forEach(item => item.classList.remove('show'));
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Abrir menú');
 
         // Set Menu State
         showMenu = false;
@@ -42,6 +46,9 @@ window.addEventListener("DOMContentLoaded", () => {
     const textOutput = document.querySelector('.titulo'),
         phrases = ['Ingeniero de Software', 'Estudiante de Inteligencia Artificial', 'Emprendedor'],
         delay = [2000, 4000, 6000,8000];
+
+    // Only the home page has the rotating subtitle
+    if (!textOutput) return;
 
     phrases.forEach((phrase, i) => setTimeout(() => textOutput.textContent = phrase, delay[i]));
 
