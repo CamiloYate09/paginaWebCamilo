@@ -1,0 +1,12 @@
+# Cabeceras HTTP que Cloudflare añade a cada respuesta (no se publica como archivo).
+# Externos permitidos: Font Awesome (use.fontawesome.com) y Google Fonts (fonts.googleapis.com / fonts.gstatic.com).
+# 'unsafe-inline' en style-src cubre los atributos style= que quedan en el HTML.
+# HSTS sin preload: activarlo solo si todos los subdominios servirán HTTPS para siempre.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://use.fontawesome.com https://fonts.googleapis.com; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; manifest-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=15552000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
