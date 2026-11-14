@@ -1,1 +1,5 @@
 node_modules
+# Configuración local del IDE (contiene rutas de la máquina)
+.idea/
+# Notas internas: Cloudflare publica la raíz, así que no deben versionarse
+docs/
